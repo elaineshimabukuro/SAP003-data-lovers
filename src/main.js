@@ -36,10 +36,12 @@ document.getElementById("filter").addEventListener("click", function() {
   });
   
   const pokemonFiltrado = app.filtrarPorTipo(POKEMON.pokemon, types);
-  carregarPokemon(pokemonFiltrado)  
-  }
+  //console.log(pokemonFiltrado)
+  carregarPokemon(pokemonFiltrado);
+  pokePorcentagem(pokemonFiltrado);  
+  console.log(pokePorcentagem(pokemonFiltrado));
+}
 );
-
 
 // botão ordenar pokemon
 
@@ -53,7 +55,7 @@ document.getElementById("ordenarPokemons").addEventListener("change", function()
 
 function selectOrderPokemon() {
   let orderPokemon = document.getElementById("ordenarPokemons").value;
-  let orderList = window.ordenPokemons(orderPokemon);
+  let orderList = window.ordenPokemons(orderPokemon, personagens);
   carregarPokemon(orderList);
 };
 

@@ -1,19 +1,13 @@
 
-/*function filtrarPorTipo(pokemon, types){
-  return pokemon.filter(item => item.type.includes(types));
-  
-}*/
 window.app = {
   filtrarPorTipo,
-  ordenPokemons,
-  computeStats,
+  pokePorcentagem, 
 };
 
 //filtrar pokemon
 
 function filtrarPorTipo(pokemon, types) { 
-  // 
-  let pokeTipos = []; // recebe/adiciona o pokemon filtrado
+  let pokeTipos = []; 
   for (let i = 0; i < types.length; i++) { //entra no array que guarda os tipos de pokemon
     const type = types[i]; 
     pokemon.map(function (personagem) { //procura dentro do "for" o tipo de pokemon selecionado no checkbox
@@ -28,13 +22,14 @@ function filtrarPorTipo(pokemon, types) {
 
 //ordenar pokemon
 
-function ordenPokemons(orderPokemon) {
-  const personagens = POKEMON.pokemon;
+window.ordenPokemons = ordenPokemons;
+
+function ordenPokemons(orderPokemon, pokemons) {
   let orderList = [];
 
   switch (orderPokemon) {
   case "a-z": 
-    personagens.sort((a, b) => {
+    pokemons.sort((a, b) => {
       if (a.name > b.name) {
         return 1;
       }
@@ -42,46 +37,20 @@ function ordenPokemons(orderPokemon) {
     });
     break;
   case "z-a": 
-    personagens.sort((a, b) => {
+    pokemons.sort((a, b) => {
       if (a.name > b.name) {
         return 1;
       }
       return -1;
     });
-    personagens.reverse();
+
+    pokemons.reverse();
     break;
   }
+  return pokemons;
 };
 
-/*function computeStats(data) {
+function pokePorcentagem(data) {
   return ((data.length*100)/151).toFixed(1);
-  }*/
-  
-
-/*const pokeSoma = document.getElementsByClassName(type)
-. filtrarPorTipo(personagens => pokeSoma.type === "fire")
-.reduce((valorAcumulado,pokeSoma)=>{
-  if(valorAcumulado.type > pokeSoma.type){
-  return valorAcumulado;
- } 
- return pokeSoma;
-}, {"type": 0});
-console.log(pokeSoma)*/
-
-/*const pokeSoma = POKEMON.pokemon.reduce((contador, types) => Object.assign (contador, {["type"]:(contador ["type"] || 0) + 1}), {})
-console.log(pokeSoma)*/
-
-/*pokeSoma = personagens.reduce((total, elemento) => {
-  if (elemento.type === 'fire') return total += (elemento.type);
-  else return total}, []);
-  console.log(pokeSoma)*/
-
-/*function somaPokemon() {
-    return personagens.reduce(function (soma, personagens) {
-      if (personagens.type ==="fire") return soma + personagens.type;
-      
-    },0)
-    
-  }
-  console.log(somaPokemon)*/
+}
  
