@@ -36,7 +36,6 @@ document.getElementById("filter").addEventListener("click", function() {
   });
   
   const pokemonFiltrado = app.filtrarPorTipo(POKEMON.pokemon, types);
-  //console.log(pokemonFiltrado)
   carregarPokemon(pokemonFiltrado);
   pokePorcentagem(pokemonFiltrado);  
   console.log(pokePorcentagem(pokemonFiltrado));

@@ -51,6 +51,17 @@ function ordenPokemons(orderPokemon, pokemons) {
 };
 
 function pokePorcentagem(data) {
+  console.log(data)
   return ((data.length*100)/151).toFixed(1);
+  
 }
+
+/*const total = data.type.reduce(
+  (accumulator, item) => {
+    console.log(data.type)
+    return accumulator + item.type, 0
+  });*/
+
+
+
  
