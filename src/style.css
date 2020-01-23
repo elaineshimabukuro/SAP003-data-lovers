@@ -6,6 +6,10 @@
   }
 }
 
+header{
+  position: fixed;
+  margin-top: 5%;
+}
 
 body {
   background-image: url(http://casadocarvalho.net/wp-content/uploads/2019/02/Screenshot01.png);
@@ -17,7 +21,6 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
 
    }
 
@@ -32,7 +35,7 @@ body {
     padding: 1%;
     text-align: center;
     font-weight: bolder;
-    width: 300px;
+    width: 250px;
     margin: 3%;
     border: 2px solid;
     border-color: rgb(197, 194, 23);
@@ -48,11 +51,15 @@ body {
     font-family: 'Fjalla One', sans-serif;
   }
 
-  #principal{
-    margin-left: 300px;
-    display: flow-root;
-    margin-top: 100px;
-
+  .principal{
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 275px;
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+    position: absolute;
   }
 
   #filter{
@@ -69,13 +76,15 @@ body {
   }
 
     .menu{
-      float: left;
-      margin-top: 135px;
-      margin-left: 30px;
       background-color: rgba(255, 255, 255, 0.534);
-      background-color: rgba(255, 255, 255, 0.534);
+      flex-direction: column;
+      display: flex;
+      align-items: baseline;
+      width: 16%;
       padding: 1%;
-      width: unset;
+      align-items: center;
+      position: fixed;
+      margin-top: 7%;
     }
 
     h1{

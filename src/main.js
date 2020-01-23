@@ -3,7 +3,7 @@ let personagens = POKEMON.pokemon;
 function carregarPokemon(pokemons) {
   personagens = pokemons;
 
-  const showPokemons = document.getElementById("principal");
+  const showPokemons = document.getElementsByClassName("principal")[0];
   let layout = "";
   showPokemons.innerHTML = "";
   for (pokemon of pokemons) {
@@ -27,9 +27,6 @@ carregarPokemon(personagens);
 
 document.getElementById("filter").addEventListener("click", function() {
   const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element) {
-    //foi criado um array, no qual estão os pokemon filtrados, a partir do array onde estão todos os pokemon
-    //queryselectorall retornou uma lista com os elementos especificados(tipos checados pelo usuário)
-    // map foi chamado para buscar o tipo dentro desse novo array
     return element.value;
   });
   filtrarPorTipo(POKEMON.pokemon, types);
