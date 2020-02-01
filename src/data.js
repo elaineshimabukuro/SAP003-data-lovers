@@ -5,15 +5,15 @@ window.app = {
   pokeCalc
 };
 
-//filtrar pokemon
+
 
 function filtrarPorTipo(pokemon, types) {
-  let pokeTipos = []; // recebe/adiciona o pokemon filtrado
-  for (let i = 0; i < types.length; i++) { //entra no array que guarda os tipos de pokemon
+  let pokeTipos = []; 
+  for (let i = 0; i < types.length; i++) { 
     const type = types[i];
-    pokemon.map(function (personagem) { //procura dentro do "for" o tipo de pokemon selecionado no checkbox
-      if (personagem.type.includes(type)) { // determinamos se realmente o array contem o tipo de pokemon selecionado
-        pokeTipos.push(personagem); //retorna então adicionando o pokemon selecionado ao array
+    pokemon.map(function (personagem) { 
+      if (personagem.type.includes(type)) {
+        pokeTipos.push(personagem); 
       }
     });
   }
@@ -21,7 +21,6 @@ function filtrarPorTipo(pokemon, types) {
 
 }
 
-//ordenarpokemon
 
 function ordenPokemons(orderPokemon, pokemons) {
   let orderList = [];
@@ -47,8 +46,6 @@ function ordenPokemons(orderPokemon, pokemons) {
   }
   return pokemons;
 };
-
-//Calcula quantos pokemons tem em cada tipo
 
 function pokeCalc(pokeData) {
   let countTypes = pokeData.reduce(function (acumulador, pokemon) {

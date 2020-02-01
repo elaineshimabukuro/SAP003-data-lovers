@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=1, maximum-scale=1">
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="style.css" media="screen" />
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Luckiest+Guy|Nunito&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=1, maximum-scale=1">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="style.css" media="screen" />
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Luckiest+Guy|Nunito&display=swap" rel="stylesheet">
 
-      <div id="logopoke" class="header">
-          <a href="../src/index.html">
-        <img id="logo" src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo.png" width = "60%"/>
-          </a>
-      </div>
+</head>
 
-<aside class="menu">
+<body>
+  <header>
+      <a href="../src/index.html">
+        <img id="logo" src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo.png" width="60%" />
+      </a>
+  </header>
+
+  <aside class="menu">
 
     <label for="ordenar"></label>
-    <select  id="ordenarPokemons">
+    <select id="ordenarPokemons">
       <option selected>Ordenar</option>
       <option value="a-z">A-Z</option>
       <option value="z-a">Z-A</option>
@@ -29,31 +30,32 @@
     <div id="tipos" class="poke-type">
       <h1>Tipos de <br> Pokemon</h1>
 
-        <input type="checkbox" class="type" value="Fire">Fire (<span id="typeFire"></span>)<br>
-        <input type="checkbox" class="type" value="Water">Water (<span id="typeWater"></span>)<br>
-        <input type="checkbox" class="type" value="Poison">Poison (<span id="typePoison"></span>)<br>
-        <input type="checkbox" class="type" value="Bug">Bug (<span id="typeBug"></span>)<br>
-        <input type="checkbox" class="type" value="Normal">Normal (<span id="typeNormal"></span>)<br>
-        <input type="checkbox" class="type" value="Grass">Grass (<span id="typeGrass"></span>)<br>
-        <input type="checkbox" class="type" value="Electric">Electric (<span id="typeElectric"></span>)<br>
-        <input type="checkbox" class="type" value="Flying">Flying (<span id="typeFlying"></span>)<br>
-        <input type="checkbox" class="type" value="Fighting">Fighting (<span id="typeFighting"></span>)<br>
-        <input type="checkbox" class="type" value="Rock">Rock (<span id="typeRock"></span>)<br>
-        <input type="checkbox" class="type" value="Psychic">Psychic (<span id="typePsychic"></span>)<br>
-        <input type="checkbox" class="type" value="Ice">Ice (<span id="typeIce"></span>)<br>
-        <input type="checkbox" class="type" value="Dragon">Dragon (<span id="typeDragon"></span>)<br>
-        <input type="checkbox" class="type" value="Ghost">Ghost (<span id="typeGhost"></span>)<br>
-        <input type="checkbox" class="type" value="Ground">Ground (<span id="typeGround"></span>)<br>
+      <input type="checkbox" class="type" value="Fire">Fire (<span id="typeFire"></span>)<br>
+      <input type="checkbox" class="type" value="Water">Water (<span id="typeWater"></span>)<br>
+      <input type="checkbox" class="type" value="Poison">Poison (<span id="typePoison"></span>)<br>
+      <input type="checkbox" class="type" value="Bug">Bug (<span id="typeBug"></span>)<br>
+      <input type="checkbox" class="type" value="Normal">Normal (<span id="typeNormal"></span>)<br>
+      <input type="checkbox" class="type" value="Grass">Grass (<span id="typeGrass"></span>)<br>
+      <input type="checkbox" class="type" value="Electric">Electric (<span id="typeElectric"></span>)<br>
+      <input type="checkbox" class="type" value="Flying">Flying (<span id="typeFlying"></span>)<br>
+      <input type="checkbox" class="type" value="Fighting">Fighting (<span id="typeFighting"></span>)<br>
+      <input type="checkbox" class="type" value="Rock">Rock (<span id="typeRock"></span>)<br>
+      <input type="checkbox" class="type" value="Psychic">Psychic (<span id="typePsychic"></span>)<br>
+      <input type="checkbox" class="type" value="Ice">Ice (<span id="typeIce"></span>)<br>
+      <input type="checkbox" class="type" value="Dragon">Dragon (<span id="typeDragon"></span>)<br>
+      <input type="checkbox" class="type" value="Ghost">Ghost (<span id="typeGhost"></span>)<br>
+      <input type="checkbox" class="type" value="Ground">Ground (<span id="typeGround"></span>)<br>
 
-        <button id="filter">Filtrar</button><br>
+      <button id="filter">Filtrar</button><br>
     </div>
   </aside>
 
-  <main id="principal">
+  <main class="principal">
   </main>
 
-    <script src="data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+  <script src="data/pokemon/pokemon.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

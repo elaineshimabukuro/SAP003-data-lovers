@@ -1,23 +1,24 @@
-@media screen and (max-width: 480px) {
-  .menu, #principal, .poke-card{
-    float: right;
-    width: 100%;
-    margin-right:0;
-  }
+
+header{
+  display: flex;
+  position: fixed;  
+  justify-content: center;
+  padding: 4%;
+  width: 100%;
+  top: 0;
 }
 
-
 body {
+  display: flex;
+  width: 100%;
   background-image: url(http://casadocarvalho.net/wp-content/uploads/2019/02/Screenshot01.png);
   background-attachment: fixed;
 }
-
 
   #logo{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
 
    }
 
@@ -27,32 +28,39 @@ body {
 }
 
 .poke-card {
-    background-color: rgb(248, 244, 8);
-    display: inline-block;
-    padding: 1%;
-    text-align: center;
-    font-weight: bolder;
-    width: 300px;
-    margin: 3%;
-    border: 2px solid;
-    border-color: rgb(197, 194, 23);
-    font-family: 'Nunito', sans-serif;
-    font-size: 120%;
-    opacity: 0.92;
-     }
-  .subtitle{
-    font-family: 'Fjalla One', sans-serif;
+  background-color: rgb(248, 244, 8);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 3%;
+  font-weight: bolder;
+  margin: 3%;
+  border: 2px solid;
+  border-color: rgb(197, 194, 23);
+  font-family: 'Nunito', sans-serif;
+  font-size: 120%;
+  opacity: 0.92;
   }
 
   .subtitle{
     font-family: 'Fjalla One', sans-serif;
   }
 
-  #principal{
-    margin-left: 300px;
-    display: flow-root;
-    margin-top: 100px;
-
+  .infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .principal{
+    margin-left: 10%;
+    width: 130%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+    margin: 28% 6% 0% 37%;
   }
 
   #filter{
@@ -67,37 +75,43 @@ body {
     font-size: 100%;
     padding: 6%;
   }
+  
+  .menu{
+    background-color: rgba(255, 255, 255, 0.534);
+    flex-direction: column;
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    width: 26%;
+    height: 63%;
+    color: black;
+    padding: 2%;
+    margin: 26% 0% 0% 2%;
+    overflow-y: scroll;
+    position: fixed;
+}
+  .poke-type{
+   font-size: 115%;
+  }
 
+  h1{
+    color: black;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 160%;
+  }
+
+  @media screen and (min-width: 856px){
     .menu{
-      float: left;
-      margin-top: 135px;
-      margin-left: 30px;
-      background-color: rgba(255, 255, 255, 0.534);
-      background-color: rgba(255, 255, 255, 0.534);
-      padding: 1%;
-      width: unset;
+      display:inline-flex;
+      position: fixed;
+      width: 13%;
+      height: 65%;
+      margin: 13% 0% 0% 2%;
+      overflow-y: hidden;
+      padding: 2%;
     }
-
-    h1{
-      color: black;
-      font-family: 'Fjalla One', sans-serif;
-      font-size: 160%;
+    .principal{
+      width: 150%;
+      margin: 27% 10% 0% 20%;
     }
-
-    .poke-type{
-      font-family: 'Fjalla One', sans-serif;
-      color: white;
-      font-size: 130%;
-    }
-
-    h1{
-      color: black;
-      font-family: 'Fjalla One', sans-serif;
-      font-size: 160%;
-    }
-
-    .poke-type{
-      font-family: 'Fjalla One', sans-serif;
-      color:black;
-      font-size: 130%;
-    }
+  }
+ 
